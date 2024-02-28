@@ -1,80 +1,101 @@
 <template>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <h2>Contact Us</h2>
-          <form @submit.prevent="submitForm">
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" v-model="name" required>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Honk&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <div>
+      <nav class="navbar fixed-top">
+      </nav>
+      <main id="oi">
+        <section class="mb-1">
+          <h2 class="h1-responsive font-weight-bold text-center my-4"></h2>
+          <p class="text-center w-responsive mx-auto mb-5">
+            
+          </p>
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-9 mb-md-0 mb-5">
+                <form action="https://formspree.io/f/mwkdzevr" method="POST" class="container" id="form">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">First Name </label>
+                            <input type="Fname" name="first_name" class="form-control" id="Inputfirstname" required aria-describedby="Fname">
+                            <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                            <input type="lname" name="surname" class="form-control" id="Inputlastname" required aria-describedby="emailHelp">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" name="email" class="form-control" id="InputEmail1" required aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label id="message"  for="exampleInputmessage" class="form-label">Comments / Questions</label>
+                            <input type="message" name="message" class="form-control" id="exampleInputmessage" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" v-model="email" required>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-3 text-center">
+              <ul class="list-unstyled mb-0">
+                <!-- Contact information (unchanged) -->
+              </ul>
             </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" v-model="message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
+            <!-- Grid column -->
+          </div>
+        </section>
+        <!-- Section: Contact v.2 -->
+      </main>
     </div>
   </template>
-  
   <script>
   export default {
-    data() {
-      return {
-        name: '',
-        email: '',
-        message: ''
-      };
-    },
     methods: {
       submitForm() {
-       
-        console.log('Name:', this.name);
-        console.log('Email:', this.email);
-        console.log('Message:', this.message);
-        
-        // Reset form fields after submission
-        this.name = '';
-        this.email = '';
-        this.message = '';
-      }
-    }
+        // Handle form submission logic here
+        // You can use external libraries like axios for form submission
+        // or send an HTTP request to your server endpoint
+        // Example: axios.post('your-api-endpoint', formData)
+      },
+    },
   };
   </script>
-  
-  <style>
-  *,
-::before,
-::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-    
+  <style scoped>
+p {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  line-height: 1.6;
+}
+h2 {
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  margin-bottom: 30px;
+  margin-top: -3%;
+}
+input{
+  margin-left: 16%;
+}
+label{
+  margin-left: 35%;
+  font-weight: bold;
+}
+.btn{
+  margin-left: 35%;
+}
+.form-text{
+  color: white;
+  margin-left: 36%;
+}
+#exampleInputmessage{
+  padding: 2.5%;
+}
+h2{
+   font-family: "Honk", system-ui !important;
+  font-optical-sizing: auto !important;
+  font-weight: 400 !important;
+  font-size: 50px;
+  font-style: normal !important;
+}
+.row { 
+	background: #e7eaf6; 
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.row {
-  margin-bottom: 20px;
-}
-
-.display-2 {
-  color: #333;
-}
-
-.lead {
-  font-size: 1.2rem;
-}
   </style>
-  

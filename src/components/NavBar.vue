@@ -56,7 +56,7 @@ export default {
     
     
     .navbar {
-        background-color: #f8f9fa;
+        background-color: #1d1d1e;
         color: #333; 
     }
 
@@ -69,6 +69,6 @@ export default {
     }
 
     .nav-link:hover {
-        color: #555; 
+        color: #555555; 
     }
 </style>
