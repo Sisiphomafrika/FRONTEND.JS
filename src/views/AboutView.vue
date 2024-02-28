@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="Container-fluid">
     <div class="row justify-content-center m-5">
       <div class="col-7">
         <h1>ABOUT US!</h1>
@@ -15,27 +15,20 @@
   </div>
 </template>
 
-
 <style scoped>
-
-.about{
-background-image: url('https://i.ibb.co/88HdN9X/bill-mead-wma-P3-Tl80ww-unsplash.jpg');
-background-size: cover;
-size: 100px;
-padding-bottom:600px;
-padding-top: 20px;
-text-align: center;
-
+.Container-fluid {
+  background-color: #e7eaf6; /* Set the background color */
+  color: black; /* Set the text color to black */
+  padding: 20px; /* Add padding */
+  text-align: center;
 }
 
 h1 {
-  color: hsl(0, 14%, 87%);
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 h2 {
-  color: hwb(0 87% 9%);
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -56,10 +49,9 @@ h2 {
   }
 
   .lead {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: hwb(0 100% 0%); /* Custom text color */
-}
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: black; /* Custom text color */
+  }
 }
 </style>
-
